@@ -1,5 +1,6 @@
 package TestProperty;
 
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -9,12 +10,12 @@ public class TestProperty {
 	FileInputStream fs;
 
 	public TestProperty() throws IOException {
-		fs = new FileInputStream("c:\\configfiles\\configproperties");
+		fs = new FileInputStream("c:\\ConnectedChillersConfig\\config_dev.properties");
 		
 		property = new Properties();
 		property.load(fs);
 		
-	System.out.println(property.getProperty("firstname"));
+	System.out.println(property.getProperty("Get_User_Data"));
 		
 	}
 
